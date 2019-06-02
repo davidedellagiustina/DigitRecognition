@@ -6,6 +6,10 @@ It features a Feed-Forward Neural Network backend bundled with a simple GUI whic
 
 The Feed-Forward NN was trained over the [MNIST dataset](http://yann.lecun.com/exdb/mnist/). Various trained neural networks are provided inside the `res/neural_network` folder, even if the program uses the one which scored the best results on the MNIST test dataset (97.02%).
 
+# Notes
+
+In order to make everything work, your local installation must include all the python dependancies included in `requirements.txt` (which can be installed with `pip install -r requirements.txt`) and also [ghostscript](https://www.ghostscript.com/). Make sure that ghostscript is also inclded in the system path.
+
 # Credits and license
 
 All the work done on this feed-forward neural network is based on the first two chapters of "[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)", Michael A. Nielsen, Determination Press, 2015.

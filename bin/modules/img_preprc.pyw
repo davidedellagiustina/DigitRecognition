@@ -1,6 +1,6 @@
 import numpy as np
 from scipy import ndimage
-import math
+import io, math
 import PIL
 from PIL import Image, ImageGrab, ImageTk
 
@@ -8,10 +8,19 @@ from PIL import Image, ImageGrab, ImageTk
 
 class Image(object):
 
+	"""
+	OLD CONSTRUCTOR: DOESN'T WORK WITH HiDPI DISPLAYS
 	# Constructor - grabs the image at the given coordinates
-
 	def __init__(self, x1, y1, x2, y2):
 		img = ImageGrab.grab((x1, y1, x2, y2))
+		self.img = np.array(img)
+	"""
+	
+	# Constructor - grabs the image inside the canvas
+	
+	def __init__(self, canvas):
+		eps = canvas.postscript(colormode='color')
+		img = PIL.Image.open(io.BytesIO(eps.encode('utf-8')))
 		self.img = np.array(img)
 
 	# Function that transforms the image to b&w (grayscale)

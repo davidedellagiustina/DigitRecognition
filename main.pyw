@@ -78,11 +78,15 @@ class Application(object):
 		# Capture image
 		self.console.log("Image processing started ...")
 		self.console.log("Capturing image ...")
+		"""
+		# OLD CODE TO GET CANVAS CONTENT: DOESN'T WORK WITH HiDPI DISPLAYS
 		x1 = self.window.winfo_rootx() + self.drawing_area.winfo_x() + 10 + 1
 		y1 = self.window.winfo_rooty() + self.drawing_area.winfo_y() + 5 + 1
 		x2 = x1 + self.drawing_area.winfo_width() - 2
 		y2 = y1 + self.drawing_area.winfo_height() - 2
 		self.img = Image(x1, y1, x2, y2)
+		"""
+		self.img = Image(self.drawing_area)
 		# Grayscale
 		self.console.log("Grayscaling ...")
 		self.img.grayscale()
