@@ -10,9 +10,9 @@ The Feed-Forward NN was trained over the [MNIST dataset](http://yann.lecun.com/e
 
 # How it works
 
-Just run `main.pyw` and dwar a digit inside the drawind area (the top-left canvas). If you wish to train a network yourself or to use one of the ones included in `res/neural_network`, just change the line marked as `# Settings` at the beginning of `main.pyw` with the name of the network you want to use.
+Just run `main.pyw` and draw a digit inside the drawing area (the top-left canvas). If you wish to train a network yourself or to use one of the ones included in `res/neural_network`, just change the line marked as `# Settings` at the beginning of `main.pyw` with the name of the network you want to use.
 
-You can train a network yourself by running `train.pyw` script. You may wish to customize the parameters inside it, first, to better fit your heuristics.
+You can train a network yourself by running the `train.pyw` script. You may wish to customize the parameters inside it, first, to better fit your heuristics.
 
 # Dependencies
 
