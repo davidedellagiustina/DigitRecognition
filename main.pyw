@@ -22,6 +22,9 @@ class Application(object):
 	ICON = "res/images/favicon.ico"
 	GEOMETRY = (1018, 577)
 	GUI = "res/graphics/main.ui"
+
+	# Settings
+
 	ANN = "ann_2h12050_9702"
 
 	# Variables
