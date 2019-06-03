@@ -9,7 +9,7 @@ class Ann(object):
 
 	@staticmethod
 	def pickle(ann, destination):
-		with open(detination, "wb") as f:
+		with open(destination, "wb") as f:
 			pickle.dump(ann, f, pickle.HIGHEST_PROTOCOL)
 
 	# Function that unpickles the given ANN pickled file

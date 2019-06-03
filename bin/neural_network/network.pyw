@@ -33,6 +33,7 @@ class NeuralNetwork(object):
 				print("Epoch %s: %s / %s" % (e, self.evaluate(test_data), n_test))
 			else:
 				print("Epoch %s complete" % (e))
+			eta *= 0.95
 
 	# Function that updates weights and biases basing on the nabla_w and nabla_b vertors, which are computed by the "backprop" function
 
