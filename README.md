@@ -10,17 +10,17 @@ The Feed-Forward NN was trained over the [MNIST dataset](http://yann.lecun.com/e
 
 # How it works
 
-Just run `main.pyw` and draw a digit inside the drawing area (the top-left canvas). If you wish to train a network yourself or to use one of the ones included in `res/neural_network`, just change the line marked as `# Settings` at the beginning of `main.pyw` with the name of the network you want to use.
+Just run `main.pyw` and draw a digit inside the drawing area (the top-left canvas), then press Ctrl+P to process the image. Hit Ctrl+C to clear the canvas and Ctrl+Q to quit application. If you wish to train a network yourself or to use one of the ones included in `res/neural_network`, just change the line marked as `# Settings` at the beginning of `main.pyw` with the name of the network you want to use.
 
 You can train a network yourself by running the `train.pyw` script. You may wish to customize the parameters inside it, first, to better fit your heuristics.
 
 # Dependencies
 
-In order to make everything work, your local installation must include all the python dependencies included in `requirements.txt` (which can be installed with `pip install -r requirements.txt`) and [ghostscript](https://www.ghostscript.com/). Make sure that ghostscript is also inclded in the system path.
+In order to make everything work, your local installation must include all the python dependencies included in `requirements.txt` (which can be installed with `pip install -r requirements.txt`) and [ghostscript](https://www.ghostscript.com/). Make sure that ghostscript is also included in the system path.
 
 # Credits and license
 
-All the work done on this feed-forward neural network is based on the first two chapters of "[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)", Michael A. Nielsen, Determination Press, 2015.
+All the work done on the feed-forward neural network is based on the first two chapters of "[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)", Michael A. Nielsen, Determination Press, 2015.
 The original work was licensed under Creative Commons Attribution-NonCommercial 3.0 Unported License.
 
 This software is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 License.
