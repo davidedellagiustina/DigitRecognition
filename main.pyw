@@ -9,7 +9,7 @@ from bin.modules.ann_view import AnnView
 from bin.modules.console import Console
 from bin.modules.img_preprc import Image
 from bin.modules.mouse import Mouse
-from bin.modules.ann_unpickler import AnnUnpickler
+from bin.modules.ann import Ann
 from bin.neural_network.network import NeuralNetwork
 
 # Application class
@@ -68,7 +68,7 @@ class Application(object):
 		self.window.bind("<Control-p>", self.process)
 		self.window.bind("<Control-q>", self.quit)
 		# ANN
-		self.ann = AnnUnpickler.unpickle("res/neural_network/" + self.ANN + ".pkl")
+		self.ann = Ann.unpickle("res/neural_network/" + self.ANN + ".pkl")
 		# ANN output area
 		self.ann_view = AnnView(self.window, builder.get_object("ann_view", self.window))
 

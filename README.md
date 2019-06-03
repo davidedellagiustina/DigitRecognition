@@ -10,7 +10,7 @@ The Feed-Forward NN was trained over the [MNIST dataset](http://yann.lecun.com/e
 
 # Dependencies
 
-In order to make everything work, your local installation must include all the python dependancies included in `requirements.txt` (which can be installed with `pip install -r requirements.txt`) and [ghostscript](https://www.ghostscript.com/). Make sure that ghostscript is also inclded in the system path.
+In order to make everything work, your local installation must include all the python dependencies included in `requirements.txt` (which can be installed with `pip install -r requirements.txt`) and [ghostscript](https://www.ghostscript.com/). Make sure that ghostscript is also inclded in the system path.
 
 # Credits and license
 

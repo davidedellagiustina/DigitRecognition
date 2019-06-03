@@ -1,20 +1,14 @@
 import numpy as np
 import pickle
 
-# Input parameters
+# Mnist class
 
-SOURCE_TR = "../../res/mnist/mnist_complete_train_set.csv"
-SOURCE_TE = "../../res/mnist/mnist_complete_test_set.csv"
-DESTINATION = "../../res/mnist/mnist_complete_set.pkl"
-
-# MnistPickler class
-
-class MnistPickler(object):
+class Mnist(object):
 
 	# Function that loads the mnist training and test data from csv files and prepares two arrays to be pickled
 
 	@staticmethod
-	def load(source_tr, source_te, destination):
+	def _load_(source_tr, source_te, destination):
 		mnist_training_data = []
 		mnist_test_data = []
 		# Training set array
@@ -38,11 +32,14 @@ class MnistPickler(object):
 
 	@staticmethod
 	def pickle(source_tr, source_te, destination):
-		mnist_training_data, mnist_test_data = MnistPickler.load(source_tr, source_te, destination)
+		mnist_training_data, mnist_test_data = Mnist._load_(source_tr, source_te, destination)
 		with open(destination, "wb") as f:
 			pickle.dump((mnist_training_data, mnist_test_data), f, pickle.HIGHEST_PROTOCOL)
 
-# Main script - pickles the given files to the given destination
+	# Function that pickles the arrays into a binary file
 
-if __name__ == "__main__":
-	MnistPickler.pickle(SOURCE_TR, SOURCE_TE, DESTINATION)
+	@staticmethod
+	def unpickle(source):
+		with open(source, "rb") as f:
+			mnist_training_data, mnist_test_data = pickle.load(f)
+		return (mnist_training_data, mnist_test_data)
