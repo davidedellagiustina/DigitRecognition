@@ -93,7 +93,10 @@ class Application(object):
 		self.preprc_pics[0] = self.img.get((292, 292))
 		self.stage_1.create_image(1, 1, anchor = tk.NW, image = self.preprc_pics[0])
 		# If image is not empty
-		if not np.sum(self.img.img) == 31237500: # (sum = 255*350*350)
+		self.img.invert()
+		sum = np.sum(self.img.img)
+		self.img.invert()
+		if sum != 0:
 			# Colour inversion
 			self.console.log("Inverting ...")
 			self.img.invert()
